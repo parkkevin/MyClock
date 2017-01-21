@@ -17,7 +17,7 @@ import java.util.Calendar;
 
 public class ClockComponent extends JComponent
 {
-	private static String hour;		//Declare variables.
+	private static String hour;	
 	private static String minute;
 	private static String second;
 	private static String amPm;
@@ -124,18 +124,18 @@ public class ClockComponent extends JComponent
 		//Passes arguments for Clock class.
 		Clock clock = new Clock(xMid - 2 * radius / 2, yMid - 2 * radius / 2,  radius, xMid, yMid, Color.BLACK);
 	
-		clock.drawSquare(g2);	//Draws the outermost square.
-		clock.drawCircle(g2);	//Draws the circle that forms the clock.
-		clock.drawDial(g2);		//Draws the tick marks in clock face.
-		clock.drawNum(g2);		//Draws the hour numbers in clock face.
-		clock.drawDay(g2);		//Draws the day of week in clock face
-		clock.drawTime(g2);		//Draws the hour, minute and second hand.
-		clock.drawCap(g2);		//Draws the pivoting point in the centre of clock face.
+		clock.drawSquare(g2);	
+		clock.drawCircle(g2);	
+		clock.drawDial(g2);		
+		clock.drawNum(g2);		
+		clock.drawDay(g2);		
+		clock.drawTime(g2);		
+		clock.drawCap(g2);		
 	
 		
 		DigitalClock dClock = new DigitalClock();	
-		dClock.drawBox(g2);		//Draws the outer rectangle of digital clock
-		dClock.drawDigits(g2);	//Draws the numbers of digital clock.
+		dClock.drawBox(g2);		
+		dClock.drawDigits(g2);	
 		clock.drawName(g2);
 		
 	}
