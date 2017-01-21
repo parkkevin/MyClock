@@ -22,7 +22,7 @@ import java.awt.BasicStroke;
 
 public class Clock 
 {
-	private double xTopLeft;	//Declare variables.
+	private double xTopLeft;	
 	private double yTopLeft;
 	private double radius;
 	private static int xCentre;
@@ -93,10 +93,10 @@ public class Clock
 	{
 		g2.setColor(dialColor);
 		Rectangle2D.Double square = new Rectangle2D.Double(xTopLeft, yTopLeft, 2 * radius, 2 * radius);
-		g2.fill(square);	//Fills the square with gray colour.
+		g2.fill(square);
 		g2.setColor(color);
 		g2.setStroke(STROKE_SQUARE);
-		g2.draw(square);	//Draws the outline of square.
+		g2.draw(square);
 	}
 	
 	/**
@@ -108,10 +108,10 @@ public class Clock
 	{
 		g2.setColor(circleColor);
 		Ellipse2D.Double circle = new Ellipse2D.Double(xTopLeft, yTopLeft, 2 * radius, 2 * radius);
-		g2.fill(circle);	//Fills the clock face with white colour.
+		g2.fill(circle);
 		g2.setColor(color);
 		g2.setStroke(STROKE_CIRCLE);
-		g2.draw(circle);	//Draws the outline of clock circle.
+		g2.draw(circle);	
 	}
 	
 	/**
@@ -135,7 +135,7 @@ public class Clock
 				g2.draw(tMarkThick);
 			}
 			else	//Draws smaller tick markers every 6 degree angle except for every
-			{		//30 degrees angle position.
+			{		
 				g2.setColor(dialColor);
 				g2.setStroke(STROKE_MARK_THIN);
 				Line2D.Double tMarkThin = new Line2D.Double(
@@ -168,13 +168,13 @@ public class Clock
 				g2.drawString(strNum, (int) ((xCentre - 10) + (radius - 35) * Math.cos(Math.toRadians(index))), 
 						(int) ((yCentre + 11) + (radius - 35) * Math.sin(Math.toRadians(index))));
 			}
-			if (intNum >= 10 && intNum <= 12)	//Draws numbers from 10 o'clock position to 12 o'clock position.
+			if (intNum >= 10 && intNum <= 12)
 			{
 				index -= 1;
 				g2.drawString(strNum, (int) ((xCentre - 10) + (radius - 35) * Math.cos(Math.toRadians(index))), 
 						(int) ((yCentre + 11) + (radius - 35) * Math.sin(Math.toRadians(index))));
 			}
-			if (intNum == 13)	//When number is 13, reset it to 1.
+			if (intNum == 13)	
 			{
 				intNum = 1;
 				strNum = strNum.replace("13", "1");
@@ -210,7 +210,7 @@ public class Clock
 		
 		g2.setColor(color);		
 		g2.setStroke(STROKE_DAYBOX);
-		g2.draw(dayBox);	//Draws outline of square.
+		g2.draw(dayBox);
 		
 		g2.setColor(color);
 		g2.setFont(new Font("Dialog", Font.PLAIN, 18));
